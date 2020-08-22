@@ -65,15 +65,15 @@ mp = ggplot()+
 print(mp)
 dev.off()
 
-strat2$sqrt_density <- strat2$ncounts/log(strat2$AREA_1)
-
-pdf("NA-POPS_count_density_map.pdf")
-mp = ggplot()+
-  geom_sf(data = bcr,size = 0.05,fill = viridis::cividis(1,begin = 1))+
-  geom_sf(data = strat2,aes(fill = sqrt_density),size = 0.05)+
-  scale_color_viridis_c(aesthetics = "fill",direction = -1)+
-  theme(legend.position = "bottom")
-print(mp)
-dev.off()
+# strat2$sqrt_density <- strat2$ncounts/log(strat2$AREA_1)
+# 
+# pdf("NA-POPS_count_density_map.pdf")
+# mp = ggplot()+
+#   geom_sf(data = bcr,size = 0.05,fill = viridis::cividis(1,begin = 1))+
+#   geom_sf(data = strat2,aes(fill = sqrt_density),size = 0.05)+
+#   scale_color_viridis_c(aesthetics = "fill",direction = -1)+
+#   theme(legend.position = "bottom")
+# print(mp)
+# dev.off()
 
 
